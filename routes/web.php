@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\proveedorController;
+use App\Http\Controllers\productosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/proveedor', [proveedorController::class, 'index']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/productos', [productosController::class, 'index']);
